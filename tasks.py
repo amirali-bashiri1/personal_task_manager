@@ -6,7 +6,7 @@ def show_tasks(tasks):
 
 
 def save_tasks(tasks):
-    file = open("tasks.txt", "w")
+    file = open("tasks.txt", "a")
 
     for task in tasks:
         file.write(task + "\n")
