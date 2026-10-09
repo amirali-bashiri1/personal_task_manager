@@ -22,10 +22,26 @@ if admin == "yes":
     else:
         print("Wrong password")
 
+
+
+
+
+
+
+
+
 tasks = []
 
 for i in range(3):
     task = input("Enter a task: ")
-    tasks.append(task)
+
+    priority = input("Enter priority (low/medium/high): ").lower()
+
+    while priority not in ["low", "medium", "high"]:
+        print("Invalid priority!")
+        priority = input("Enter priority (low/medium/high): ").lower()
+
+    tasks.append(task + " - " + priority)
+
 save_tasks(tasks)
 show_tasks(tasks)
