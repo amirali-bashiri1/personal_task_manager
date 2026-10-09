@@ -35,11 +35,11 @@ tasks = []
 for i in range(3):
     task = input("Enter a task: ")
 
-    priority = input("Enter priority (low/medium/high): ").lower()
+    priority = input("Enter task priority (low/medium/high): ").lower()
 
     while priority not in ["low", "medium", "high"]:
         print("Invalid priority!")
-        priority = input("Enter priority (low/medium/high): ").lower()
+        priority = input("Enter task priority (low/medium/high): ").lower()
 
     tasks.append(task + " - " + priority)
 
