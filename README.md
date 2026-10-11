@@ -27,9 +27,23 @@ A simple task manager built with Python.
 
 ## Features
 - Add tasks
-- Show all tasks
+- Display tasks
 - Save tasks to a file
-- Admin Mode
+- Admin Mode with password 
+- Set a priority for each task (low, medium, high)
+- Validate task priority input
+
+
+## Task Priority
+
+Each task can have one of three priority levels:
+
+- `low`: Low priority
+- `medium`: Medium priority
+- `high`: High priority
+
+The program converts priority input to lowercase and checks whether it is valid. If the input is invalid, the user is asked to enter a valid priority again.
+
 
 ## Project Structure
 ```text
@@ -94,13 +108,16 @@ python main.py
 Enter your name: amirali
 Welcome amirali
 Do you want to enter Admin Mode? (yes/no): no
-Enter a task: py
+Enter a task: py   
+Enter task priority (low/medium/high): low
 Enter a task: js
-Enter a task: https
+Enter task priority (low/medium/high): high           
+Enter a task: html
+Enter task priority (low/medium/high): medium         
 Your tasks:
-- py
-- js
-- https
+- py - low
+- js - high
+- html - medium
 ```
 
 ## Screenshot
@@ -117,6 +134,9 @@ Your tasks:
 
 ![Admin Mode](pictures/pic3.png)
 
+### 4. Task Priority
+![Task Priority](pictures/pic4.png)
+
 ## Demo
 ![demo](gifs/Animation.gif)
 
@@ -124,7 +144,8 @@ Your tasks:
 - [x] Add tasks
 - [x] Show tasks
 - [x] Save tasks to a file
-- [x] Add Admin Mode
+- [x] Admin Mode
+- [x] add task priority
 - [ ] Add task search
 - [ ] Add task editing
 
